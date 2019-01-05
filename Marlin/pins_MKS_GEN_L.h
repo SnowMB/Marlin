@@ -56,4 +56,8 @@
   #define Z2_CS_PIN        44
 #endif
 
+#ifndef Z_MIN_PROBE_PIN
+  #define Z_MIN_PROBE_PIN 19
+#endif
+
 #include "pins_RAMPS.h"
