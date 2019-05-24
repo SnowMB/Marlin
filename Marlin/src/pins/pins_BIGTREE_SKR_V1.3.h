@@ -41,8 +41,10 @@
 //
 #define X_MIN_PIN          P1_29
 #define X_MAX_PIN          P1_28
-#define Y_MIN_PIN          P1_27
-#define Y_MAX_PIN          P1_26
+//#define Y_MIN_PIN          P1_27
+//#define Y_MAX_PIN          P1_26
+#define Y_MIN_PIN          P1_26
+#define Y_MAX_PIN          P1_27
 #define Z_MIN_PIN          P1_25
 #define Z_MAX_PIN          P1_24
 
@@ -96,6 +98,13 @@
 #define E1_ENABLE_PIN      P0_10
 #ifndef E1_CS_PIN
   #define E1_CS_PIN        P1_01
+#endif
+
+#define Z2_STEP_PIN        P0_01
+#define Z2_DIR_PIN         P0_00
+#define Z2_ENABLE_PIN      P0_10
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN        P1_01
 #endif
 
 //
@@ -163,6 +172,8 @@
 #define HEATER_0_PIN       P2_07
 #if HOTENDS == 1
   #define FAN1_PIN         P2_04
+  #undef E0_AUTO_FAN_PIN
+  #define E0_AUTO_FAN_PIN  P2_04
 #else
   #define HEATER_1_PIN     P2_04
 #endif
